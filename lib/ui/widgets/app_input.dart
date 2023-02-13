@@ -11,6 +11,7 @@ class AppInput extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      cursorColor: kBlackColor,
       decoration: InputDecoration(
         hintText: hintText,
         border: OutlineInputBorder(

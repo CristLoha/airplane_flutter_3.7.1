@@ -16,8 +16,8 @@ class SignUpPage extends StatelessWidget {
           padding: EdgeInsets.symmetric(
             horizontal: defaultMargin,
           ),
-          children: [
-            const SignUpTitle(),
+          children: const [
+            SignUpTitle(),
             SignUpForm(),
           ],
         ),
