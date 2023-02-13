@@ -1,9 +1,10 @@
 import 'package:airplane/shared/box_extension.dart';
 import 'package:airplane/shared/theme.dart';
 import 'package:flutter/material.dart';
+import '../../../widgets/app_button.dart';
 
-class GetStartedTittle extends StatelessWidget {
-  const GetStartedTittle({super.key});
+class GetStartedTittleButton extends StatelessWidget {
+  const GetStartedTittleButton({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +28,13 @@ class GetStartedTittle extends StatelessWidget {
             ),
             textAlign: TextAlign.center,
           ),
+          50.heightBox,
+          AppButton(
+            width: 220,
+            text: 'Get Started',
+            onPressed: () {},
+          ),
+          80.heightBox,
         ],
       ),
     );
