@@ -1,3 +1,4 @@
+import 'package:airplane/shared/box_extension.dart';
 import 'package:airplane/shared/icon_string.dart';
 import 'package:airplane/shared/img_string.dart';
 import 'package:airplane/shared/theme.dart';
@@ -29,6 +30,7 @@ class BonusCard extends StatelessWidget {
         ],
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
@@ -73,9 +75,23 @@ class BonusCard extends StatelessWidget {
                   fontSize: 16,
                   fontWeight: medium,
                 ),
-              )
+              ),
             ],
-          )
+          ),
+          41.heightBox,
+          Text(
+            'Balance',
+            style: whiteTextStyle.copyWith(
+              fontWeight: light,
+            ),
+          ),
+          Text(
+            'IDR 280.000.000',
+            style: whiteTextStyle.copyWith(
+              fontWeight: medium,
+              fontSize: 26,
+            ),
+          ),
         ],
       ),
     );
