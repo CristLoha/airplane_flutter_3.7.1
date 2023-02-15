@@ -9,7 +9,9 @@ class BonusButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppButton(
       text: 'Start Fly Now',
-      onPressed: () {},
+      onPressed: () {
+        Navigator.pushNamed(context, '/main');
+      },
       width: 220,
     );
   }
