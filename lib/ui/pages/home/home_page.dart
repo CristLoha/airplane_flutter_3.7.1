@@ -11,9 +11,6 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: ListView(
-        padding: EdgeInsets.symmetric(
-          horizontal: defaultMargin,
-        ),
         children: [
           30.heightBox,
           const HomeHeader(),
