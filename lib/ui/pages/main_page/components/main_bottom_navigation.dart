@@ -24,22 +24,22 @@ class MainBottomNavigation extends StatelessWidget {
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
+          children: const [
             CustomButtonNav(
               icon: IconsString.iconHome,
-              color: kPrimaryColor,
+              isSelected: true,
             ),
             CustomButtonNav(
               icon: IconsString.iconBooking,
-              color: kTransparentColor,
+              isSelected: false,
             ),
             CustomButtonNav(
               icon: IconsString.iconCard,
-              color: kTransparentColor,
+              isSelected: false,
             ),
             CustomButtonNav(
               icon: IconsString.iconSettings,
-              color: kTransparentColor,
+              isSelected: false,
             ),
           ],
         ),

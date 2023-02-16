@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 
 class CustomButtonNav extends StatelessWidget {
   final String icon;
-  final Color color;
+  final bool isSelected;
+
   const CustomButtonNav({
     super.key,
     required this.icon,
-    required this.color,
+    this.isSelected = false,
   });
 
   @override
@@ -32,7 +33,7 @@ class CustomButtonNav extends StatelessWidget {
           width: 30,
           height: 2,
           decoration: BoxDecoration(
-            color: color,
+            color: isSelected ? kPrimaryColor : kTransparentColor,
             borderRadius: BorderRadius.circular(18),
           ),
         ),
