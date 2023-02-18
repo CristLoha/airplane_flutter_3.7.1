@@ -12,8 +12,8 @@ class MainPage extends StatelessWidget {
       backgroundColor: kBackgroundColor,
       body: Stack(
         children: [
-          MainBottomNavigation(),
           MainBuildContent(),
+          MainBottomNavigation(),
         ],
       ),
     );
