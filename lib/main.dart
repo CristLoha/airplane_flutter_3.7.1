@@ -4,6 +4,7 @@ import 'package:airplane/ui/pages/main_page/main_page.dart';
 import 'package:airplane/ui/pages/sign_up/sign_up_page.dart';
 import 'package:flutter/material.dart';
 
+import 'ui/pages/detail/detail_page.dart';
 import 'ui/pages/splash/splash_page.dart';
 
 void main() {
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         '/sign-up': (context) => const SignUpPage(),
         '/bonus': (context) => const BonusPage(),
         '/main': (context) => const MainPage(),
+        '/detail': (context) => const DetailPage(),
       },
     );
   }

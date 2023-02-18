@@ -15,6 +15,7 @@ class NewDestination extends StatelessWidget {
         top: defaultMargin,
         left: defaultMargin,
         right: defaultMargin,
+        bottom: 100,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,7 +45,6 @@ class NewDestination extends StatelessWidget {
             img: ImgString.imageDestination8,
             rating: 4.8,
           ),
-          150.heightBox,
         ],
       ),
     );

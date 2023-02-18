@@ -19,7 +19,7 @@ class DestinationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Navigator.pushNamed(context, '/detail'),
       child: Container(
         width: 200,
         height: 323,
