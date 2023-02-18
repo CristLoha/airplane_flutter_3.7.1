@@ -1,4 +1,5 @@
 import 'package:airplane/shared/theme.dart';
+import 'package:airplane/ui/pages/detail/components/detail_shadow.dart';
 import 'package:flutter/material.dart';
 
 import 'components/detail_background.dart';
@@ -11,8 +12,9 @@ class DetailPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: kBackgroundColor,
       body: Stack(
-        children: [
-          const DetailBackground(),
+        children: const [
+          DetailBackground(),
+          DetailShadow(),
         ],
       ),
     );
