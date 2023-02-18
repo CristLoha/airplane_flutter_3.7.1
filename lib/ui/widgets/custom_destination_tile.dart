@@ -1,5 +1,6 @@
 import 'package:airplane/shared/box_extension.dart';
 import 'package:airplane/shared/theme.dart';
+import 'package:airplane/ui/widgets/custom_rating.dart';
 import 'package:flutter/material.dart';
 
 import '../../shared/icon_string.dart';
@@ -65,29 +66,11 @@ class DestinationTile extends StatelessWidget {
                 ],
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  width: 20,
-                  height: 20,
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(
-                        IconsString.iconStar,
-                      ),
-                    ),
-                  ),
-                ),
-                2.widthBox,
-                Text(
-                  '$rating',
-                  style: blackTextStyle.copyWith(
-                    fontWeight: medium,
-                  ),
-                )
-              ],
+            RatingStar(
+              rating: rating,
+              style: blackTextStyle.copyWith(
+                fontWeight: medium,
+              ),
             ),
           ],
         ),

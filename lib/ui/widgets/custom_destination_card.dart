@@ -1,7 +1,7 @@
 import 'package:airplane/shared/box_extension.dart';
 import 'package:flutter/material.dart';
-import '../../shared/icon_string.dart';
 import '../../shared/theme.dart';
+import 'custom_rating.dart';
 
 class DestinationCard extends StatelessWidget {
   final String title;
@@ -56,29 +56,11 @@ class DestinationCard extends StatelessWidget {
                       bottomLeft: Radius.circular(18),
                     ),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        width: 20,
-                        height: 20,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                              IconsString.iconStar,
-                            ),
-                          ),
-                        ),
-                      ),
-                      2.widthBox,
-                      Text(
-                        '$rating',
-                        style: blackTextStyle.copyWith(
-                          fontWeight: medium,
-                        ),
-                      )
-                    ],
+                  child: RatingStar(
+                    rating: rating,
+                    style: blackTextStyle.copyWith(
+                      fontWeight: medium,
+                    ),
                   ),
                 ),
               ),
