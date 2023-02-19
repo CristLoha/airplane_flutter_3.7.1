@@ -26,20 +26,20 @@ class MainBottomNavigation extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: const [
             CustomButtonNav(
+              index: 0,
               icon: IconsString.iconHome,
-              isSelected: true,
             ),
             CustomButtonNav(
+              index: 1,
               icon: IconsString.iconBooking,
-              isSelected: false,
             ),
             CustomButtonNav(
+              index: 2,
               icon: IconsString.iconCard,
-              isSelected: false,
             ),
             CustomButtonNav(
+              index: 3,
               icon: IconsString.iconSettings,
-              isSelected: false,
             ),
           ],
         ),

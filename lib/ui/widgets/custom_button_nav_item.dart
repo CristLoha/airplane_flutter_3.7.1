@@ -1,43 +1,47 @@
+import 'package:airplane/cubit/page_cubit.dart';
 import 'package:airplane/shared/box_extension.dart';
 import 'package:airplane/shared/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CustomButtonNav extends StatelessWidget {
+  final int index;
   final String icon;
-  final bool isSelected;
 
   const CustomButtonNav({
     super.key,
     required this.icon,
-    this.isSelected = false,
+    required this.index,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        0.heightBox,
-        Container(
-          width: 23,
-          height: 23,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(
-                icon,
-              ),
+    PageCubit pageCubit = context.watch<PageCubit>();
+    return GestureDetector(
+      onTap: () {
+        pageCubit.setPage(index);
+      },
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          0.heightBox,
+          Image.asset(
+            icon,
+            width: 24,
+            height: 24,
+            color: pageCubit.state == index ? kPrimaryColor : kGreyColor,
+          ),
+          Container(
+            width: 30,
+            height: 2,
+            decoration: BoxDecoration(
+              color:
+                  pageCubit.state == index ? kPrimaryColor : kTransparentColor,
+              borderRadius: BorderRadius.circular(18),
             ),
           ),
-        ),
-        Container(
-          width: 30,
-          height: 2,
-          decoration: BoxDecoration(
-            color: isSelected ? kPrimaryColor : kTransparentColor,
-            borderRadius: BorderRadius.circular(18),
-          ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
