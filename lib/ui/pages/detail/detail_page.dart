@@ -14,17 +14,15 @@ class DetailPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: kBackgroundColor,
       body: SafeArea(
-        child: ListView(
-          children: [
-            Stack(
-              children: [
-                const DetailBackground(),
-                const DetailShadow(),
-                30.heightBox,
-                const DetailContent(),
-              ],
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Stack(
+            children: [
+              const DetailBackground(),
+              const DetailShadow(),
+              30.heightBox,
+              const DetailContent(),
+            ],
+          ),
         ),
       ),
     );

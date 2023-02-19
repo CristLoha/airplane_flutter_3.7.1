@@ -181,6 +181,27 @@ class DetailContent extends StatelessWidget {
               ],
             ),
           ),
+
+          /// PRICE & BOOKING BUTTON
+
+          Container(
+            margin: EdgeInsets.symmetric(vertical: 30),
+            child: Row(
+              children: [
+                Column(
+                  children: [
+                    Text(
+                      'IDR 2.500.000',
+                      style: blackTextStyle.copyWith(
+                        fontSize: 18,
+                        fontWeight: medium,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
