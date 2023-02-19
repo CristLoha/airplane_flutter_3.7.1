@@ -3,11 +3,15 @@ import 'package:airplane/ui/pages/get_started/get_started_page.dart';
 import 'package:airplane/ui/pages/main_page/main_page.dart';
 import 'package:airplane/ui/pages/sign_up/sign_up_page.dart';
 import 'package:flutter/material.dart';
-
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 import 'ui/pages/detail/detail_page.dart';
 import 'ui/pages/splash/splash_page.dart';
 
-void main() {
+void main() async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 

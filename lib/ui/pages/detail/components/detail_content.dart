@@ -189,24 +189,26 @@ class DetailContent extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 30),
             child: Row(
               children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'IDR 2.500.000',
-                      style: blackTextStyle.copyWith(
-                        fontSize: 18,
-                        fontWeight: medium,
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'IDR 2.500.000',
+                        style: blackTextStyle.copyWith(
+                          fontSize: 18,
+                          fontWeight: medium,
+                        ),
                       ),
-                    ),
-                    5.heightBox,
-                    Text(
-                      'per orang',
-                      style: greyTextStyle.copyWith(
-                        fontWeight: light,
-                      ),
-                    )
-                  ],
+                      5.heightBox,
+                      Text(
+                        'per orang',
+                        style: greyTextStyle.copyWith(
+                          fontWeight: light,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
 
                 ///BOOK BUTTON
