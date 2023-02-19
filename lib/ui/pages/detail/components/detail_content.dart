@@ -1,8 +1,11 @@
 import 'package:airplane/shared/box_extension.dart';
 import 'package:airplane/shared/icon_string.dart';
+import 'package:airplane/shared/img_string.dart';
 import 'package:airplane/shared/theme.dart';
 import 'package:airplane/ui/widgets/custom_rating.dart';
 import 'package:flutter/material.dart';
+
+import '../../../widgets/interests_item.dart';
 
 class DetailContent extends StatelessWidget {
   const DetailContent({super.key});
@@ -65,6 +68,7 @@ class DetailContent extends StatelessWidget {
           ///DESC
           30.heightBox,
           Container(
+            width: double.infinity,
             padding: const EdgeInsets.symmetric(
               horizontal: 30,
               vertical: 20,
@@ -72,6 +76,109 @@ class DetailContent extends StatelessWidget {
             decoration: BoxDecoration(
               color: kWhiteColor,
               borderRadius: BorderRadius.circular(18),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ///ABOUT
+                Text(
+                  'About',
+                  style: blackTextStyle.copyWith(
+                    fontSize: 16,
+                    fontWeight: semiBold,
+                  ),
+                ),
+                6.heightBox,
+                Text(
+                  'Berada di jalur jalan provinsi yang menghubungkan Denpasar\nSingaraja serta letaknya yang dekat dengan Kebun Raya Eka Karya menjadikan tempat Bali.',
+                  style: blackTextStyle.copyWith(height: 2.6),
+                ),
+
+                ///PHOTOS
+                20.heightBox,
+                Text(
+                  'Photos',
+                  style: blackTextStyle.copyWith(
+                    fontSize: 16,
+                    fontWeight: semiBold,
+                  ),
+                ),
+                6.heightBox,
+                Row(
+                  children: [
+                    Container(
+                      width: 70,
+                      height: 70,
+                      margin: const EdgeInsets.only(right: 16),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(18),
+                        image: const DecorationImage(
+                          image: AssetImage(
+                            ImgString.imagePhoto1,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      width: 70,
+                      height: 70,
+                      margin: const EdgeInsets.only(right: 16),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(18),
+                        image: const DecorationImage(
+                          image: AssetImage(
+                            ImgString.imagePhoto2,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      width: 70,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(18),
+                        image: const DecorationImage(
+                          image: AssetImage(
+                            ImgString.imagePhoto3,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+
+                ///INTERESTS
+                20.heightBox,
+                Text(
+                  'Interets',
+                  style: blackTextStyle.copyWith(
+                    fontSize: 16,
+                    fontWeight: semiBold,
+                  ),
+                ),
+                6.heightBox,
+                Row(
+                  children: const [
+                    InterestsItem(
+                      title: 'Kids Park',
+                    ),
+                    InterestsItem(
+                      title: 'Honor Bridge',
+                    ),
+                  ],
+                ),
+                10.heightBox,
+                Row(
+                  children: const [
+                    InterestsItem(
+                      title: 'KCity Museum',
+                    ),
+                    InterestsItem(
+                      title: 'Central Mall',
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
         ],
