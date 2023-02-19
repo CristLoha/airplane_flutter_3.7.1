@@ -2,6 +2,7 @@ import 'package:airplane/shared/box_extension.dart';
 import 'package:airplane/shared/icon_string.dart';
 import 'package:airplane/shared/img_string.dart';
 import 'package:airplane/shared/theme.dart';
+import 'package:airplane/ui/widgets/app_button.dart';
 import 'package:airplane/ui/widgets/custom_rating.dart';
 import 'package:flutter/material.dart';
 
@@ -184,11 +185,12 @@ class DetailContent extends StatelessWidget {
 
           /// PRICE & BOOKING BUTTON
 
-          Container(
-            margin: EdgeInsets.symmetric(vertical: 30),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 30),
             child: Row(
               children: [
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       'IDR 2.500.000',
@@ -197,8 +199,22 @@ class DetailContent extends StatelessWidget {
                         fontWeight: medium,
                       ),
                     ),
+                    5.heightBox,
+                    Text(
+                      'per orang',
+                      style: greyTextStyle.copyWith(
+                        fontWeight: light,
+                      ),
+                    )
                   ],
                 ),
+
+                ///BOOK BUTTON
+                AppButton(
+                  width: 170,
+                  title: 'Book Now',
+                  onPressed: () {},
+                )
               ],
             ),
           ),

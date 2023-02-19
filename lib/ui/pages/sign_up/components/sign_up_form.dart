@@ -51,7 +51,7 @@ class SignUpForm extends StatelessWidget {
           30.heightBox,
           AppButton(
             width: double.infinity,
-            text: 'Get Started',
+            title: 'Get Started',
             onPressed: () => Navigator.pushNamed(context, '/bonus'),
           ),
           50.heightBox,

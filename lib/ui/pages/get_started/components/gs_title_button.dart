@@ -31,7 +31,7 @@ class GetStartedTittleButton extends StatelessWidget {
           50.heightBox,
           AppButton(
             width: 220,
-            text: 'Get Started',
+            title: 'Get Started',
             onPressed: () {
               Navigator.pushNamed(context, '/sign-up');
             },

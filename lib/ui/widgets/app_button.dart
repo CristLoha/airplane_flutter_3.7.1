@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 class AppButton extends StatelessWidget {
   final double height;
   final double width;
-  final String text;
+  final String title;
   final Function() onPressed;
   const AppButton({
     super.key,
     this.height = 55,
     required this.width,
-    required this.text,
+    required this.title,
     required this.onPressed,
   });
 
@@ -32,7 +32,7 @@ class AppButton extends StatelessWidget {
           ),
         ),
         child: Text(
-          text,
+          title,
         ),
       ),
     );

@@ -8,7 +8,7 @@ class BonusButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppButton(
-      text: 'Start Fly Now',
+      title: 'Start Fly Now',
       onPressed: () {
         Navigator.pushNamed(context, '/main');
       },
